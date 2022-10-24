@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_10_19_230355) do
     t.string "publisher"
     t.string "genre"
     t.boolean "liked", default: false
-    t.integer "user_id", null: false
+    t.index "\"user_id\""
   end
 
   create_table "users", force: :cascade do |t|

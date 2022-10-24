@@ -6,7 +6,7 @@ class CreateBooks < ActiveRecord::Migration[6.1]
       t.string :publisher
       t.string :genre
       t.boolean :liked, :default => false
-      t.integer :user_id, null:false, foreign_key: true
+      t.index ["user_id"], name: "index_todos_on_user_id"
     end
   end
 end
